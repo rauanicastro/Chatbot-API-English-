@@ -22,10 +22,10 @@ curl -X 'POST' \
 'https://api.blandy.chatbot.com/v1/user/' \
 -H 'accept: application/json' \
 -H 'Content-Type: application/json' \
--u "Motos.CX:123456",
+-u "Fake.CX:123456",
 {
-"username": "Motos.CX", 
-"email": "motos.cx@test.com", 
+"username": "Fake.CX", 
+"email": "fake.cx@test.com", 
 "phone": "+558199990000" 
 }
 ```
@@ -34,7 +34,7 @@ The `201 Created` response indicates that the user was created and it returns a 
 
 ```JSON
 {
-"unique_id": "57f8e264-0c53-458a-9241-6496a4882a8c", 
+"unique_id": "00f0e000-0c00-000a-0000-0000a0000a0c", 
 "status": "available"
 }
 ```
@@ -53,12 +53,12 @@ curl -X 'POST' \
 'https://api.blandy.chatbot.com/v1/messages/' \ 
 -H 'accept: application/json' \ 
 -H 'Content-Type: application/json' \ 
--u "Motos.CX:123456", 
+-u "Fake.CX:123456", 
 {
 "metadata": {
-	"unique_id": "57f8e264-0c53-458a-9241-6496a4882a8c",
+	"unique_id": "00f0e000-0c00-000a-0000-0000a0000a0c",
 },
-    "from": "Motos.CX",
+    "from": "Fake.CX",
     "to": "558399998888",
     "text": "Message Test Sample"
 }
@@ -68,7 +68,7 @@ After a successful request with a `200` response, the API returns the `request_i
 
 ```JSON
 {
-"request_id": "adb2312a-867d-4d63-ab50-78b5b5d7e7fe",
+"request_id": "adb0000a-000d-0d00-ab00-00b0b0d0e0fe",
 "url_callback: "https://studiob-qa.blandy.dev/message/webhook"
 }
 ```
